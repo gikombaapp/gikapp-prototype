@@ -11,16 +11,19 @@ function Navbar() {
             <a href="">Sell</a>
           </li>
           <li className="inline px-5">
-            <a href="">Cart</a>
+            <a href="">Profile</a>
           </li>
           <li className="inline px-5">
-            <a href="">Profile</a>
+            <a href="">Settings</a>
           </li>
         </ul>
       </div>
       <div className="flex flex-row outline bg-[#BEFF72] outline-[#d5d4d9] w-full h-12 justify-around items-center">
-        <ul>
-            <li></li>
+        <ul className="flex gap-4 list-none p-0 m-0 w-full justify-around">
+            <li className="px-3 text-sm">MY FEED</li>
+            <li className="px-3 text-sm">NOTIFICATIONS</li>
+            <li className="px-3 text-sm">SAVED</li>
+            <li className="px-3 text-sm">CART</li>
         </ul>
       </div>
     </nav>
