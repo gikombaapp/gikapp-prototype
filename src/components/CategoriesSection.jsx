@@ -2,10 +2,30 @@ import React from 'react'
 
 function CategoriesSection() {
   return (
-    <div className='flex flex-row flex-wrap w-full h-[45vh] bg-[#F3F0F8]'>
-        <div className='h-50 w-[30%] bg-[#8B60C3] m-10 rounded-3xl'>
+    <div className='flex flex-row flex-wrap w-full h-[45vh] bg-[#F3F0F8] justify-around items'>
+        <div className='flex items-center justify-center h-50 w-[28%] bg-[#8B60C3] m-5 rounded-3xl hover:cursor-pointer'>
             {/* Section Card */}
-            <h3>Category Name</h3>
+            <h3 className='text-[#BEFF72] text-2xl font-bold tracking-wider'>Category Name</h3>
+        </div>
+        <div className='flex items-center justify-center h-50 w-[28%] bg-[#8B60C3] m-5 rounded-3xl hover:cursor-pointer'>
+            {/* Section Card */}
+            <h3 className='text-[#BEFF72] text-2xl font-bold tracking-wider'>Category Name</h3>
+        </div>
+        <div className='flex items-center justify-center h-50 w-[28%] bg-[#8B60C3] m-5 rounded-3xl hover:cursor-pointer'>
+            {/* Section Card */}
+            <h3 className='text-[#BEFF72] text-2xl font-bold tracking-wider'>Category Name</h3>
+        </div>
+        <div className='flex items-center justify-center h-50 w-[28%] bg-[#8B60C3] m-5 rounded-3xl hover:cursor-pointer'>
+            {/* Section Card */}
+            <h3 className='text-[#BEFF72] text-2xl font-bold tracking-wider'>Category Name</h3>
+        </div>
+        <div className='flex items-center justify-center h-50 w-[28%] bg-[#8B60C3] m-5 rounded-3xl hover:cursor-pointer'>
+            {/* Section Card */}
+            <h3 className='text-[#BEFF72] text-2xl font-bold tracking-wider'>Category Name</h3>
+        </div>
+        <div className='flex items-center justify-center h-50 w-[28%] bg-[#8B60C3] m-5 rounded-3xl hover:cursor-pointer'>
+            {/* Section Card */}
+            <h3 className='text-[#BEFF72] text-2xl font-bold tracking-wider'>Category Name</h3>
         </div>
     </div>
   )
