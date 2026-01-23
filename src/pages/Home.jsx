@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "../components/ProductCard";
+import CategoriesSection from "../components/CategoriesSection"
 
 function Home() {
   return (
@@ -21,9 +22,7 @@ function Home() {
           </button>
         </div>
       </header>
-      <div>
-        <ProductCard />
-      </div>
+      <CategoriesSection />
     </>
   );
 }
