@@ -19,7 +19,7 @@ function Footer() {
         <a href="#" className='text-sm font-bold tracking-widest'>
             PRIVACY
         </a>
-        <a href="#" className='text-sm font-bold tracking-widest'>
+        <a href="https://linktr.ee/gikomba.co" target='blank' className='text-sm font-bold tracking-widest'>
             SOCIALS
         </a>
         <p>Gikomba App © {date.getFullYear()}</p>

@@ -1,7 +1,7 @@
 import React from "react";
 import ProductCard from "../components/ProductCard";
 import CategoriesSection from "../components/CategoriesSection"
-
+import PopularSection from "../components/PopularSection";
 function Home() {
   return (
     <>
@@ -23,6 +23,7 @@ function Home() {
         </div>
       </header>
       <CategoriesSection />
+      <PopularSection />
     </>
   );
 }
