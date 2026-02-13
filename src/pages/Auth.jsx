@@ -8,10 +8,12 @@ function AuthForm() {
   const [view, setView] = useState("login"); // "login" or "register"
 
   // Initialize auth once on mount
-  useEffect(() => {
-    initAuth();
-    subscribeAuth();
-  }, []); // empty deps to avoid infinite loops
+useEffect(() => {
+  initAuth();
+  const unsubscribe = subscribeAuth();
+  return unsubscribe; // clean up
+}, []);
+// empty deps to avoid infinite loops
 
   if (loading) {
     return (

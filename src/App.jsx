@@ -5,8 +5,16 @@ import Footer from './components/Footer'
 import AuthForm from './pages/Auth'
 import Profile from './pages/Profile'
 import { BrowserRouter, Routes,Route } from 'react-router-dom'
+import { useAuthStore } from "./stores/authStore";
+import { useEffect } from 'react'
 
 function App() {
+  const { initAuth, subscribeAuth } = useAuthStore();
+   useEffect(() => {
+    initAuth();
+    const unsubscribe = subscribeAuth();
+    return unsubscribe;
+  }, []);
 
 
   return (

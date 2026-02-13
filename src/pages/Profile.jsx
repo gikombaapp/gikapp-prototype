@@ -1,7 +1,9 @@
 import React from 'react'
 import { supabase } from '../lib/supabase'
 import { useEffect,useState } from 'react'
-import { data } from 'autoprefixer'
+
+
+
 const Profile = () => {
   const [profile, setProfile] = useState(null)
 useEffect(() => {
@@ -26,7 +28,7 @@ useEffect(() => {
   };
 
   fetchProfile();
-}, []);
+}, [ ]);
   console.log(profile)
 
   return (
