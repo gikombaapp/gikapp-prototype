@@ -25,7 +25,7 @@ function Navbar() {
           {user ? (
             <>
               <li>
-                <a href="">Profile ({user.email})</a>
+                <a href="/profile">Profile ({user.email})</a>
               </li>
               <li>
                 <button onClick={logout} className="hover:underline">
@@ -36,12 +36,12 @@ function Navbar() {
           ) : (
             <>
               <li>
-                <a href="/login" className="hover:underline">
+                <a href="/auth" className="hover:underline">
                   Login
                 </a>
               </li>
               <li>
-                <a href="/register" className="hover:underline">
+                <a href="/auth" className="hover:underline">
                   Register
                 </a>
               </li>
