@@ -11,7 +11,7 @@ function AuthForm() {
   useEffect(() => {
     initAuth();
     subscribeAuth();
-  }, []); // ✅ empty deps to avoid infinite loops
+  }, []); // empty deps to avoid infinite loops
 
   if (loading) {
     return (
