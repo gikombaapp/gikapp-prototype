@@ -1,20 +1,33 @@
 import React from 'react'
-import { useBaseStore } from '../stores/baseStore'
+import { supabase } from '../lib/supabase'
 import { useEffect,useState } from 'react'
+import { data } from 'autoprefixer'
 const Profile = () => {
-  const supabase = useBaseStore((state) => state.supabase)  
   const [profile, setProfile] = useState(null)
-  useEffect(() => {
-    async () => {
-        try {
-        const { data, error } = await supabase.from("sizes").select();
-        if (error) throw error;
-        setProfile(data || []);
-        } catch (err) {
-            console.error("Error fetching sizes:", err);
-        }
+useEffect(() => {
+  const fetchProfile = async () => {
+    const { data: { user } } = await supabase.auth.getUser();
+    console.log(user)
+
+    if (!user) return;
+
+    const { data, error } = await supabase
+      .from("profiles")
+      .select("*")
+      .eq("id", user.id)
+      .single();
+
+    if (error) {
+      console.error(error);
+      return;
     }
-  }, [supabase])
+
+    setProfile(data);
+  };
+
+  fetchProfile();
+}, []);
+  console.log(profile)
 
   return (
     <section className='flex flex-row flex-wrap h-screen w-full bg-[#F3F0F8]'>
